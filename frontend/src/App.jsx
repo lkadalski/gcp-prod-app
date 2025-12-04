@@ -4,10 +4,10 @@ function App() {
   const [message, setMessage] = useState("Loading...");
 
   useEffect(() => {
-    fetch(`https://backend-248026660020.europe-central2.run.app/api/hello`)
+    fetch(`/api/proxy`)
       .then(r => r.json())
       .then(d => setMessage(d.message))
-      .catch(() => setMessage("Error"));
+      .catch(() => setMessage("Error Fetching Proxy"));
   }, []);
 
   return (
