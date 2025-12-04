@@ -2,7 +2,7 @@
 import express from "express";
 import { GoogleAuth } from "google-auth-library";
 
-const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
+const backendUrl = process.env.VITE_BACKEND_URL || "http://localhost:3001";
 const app = express();
 
 // statyczny frontend
